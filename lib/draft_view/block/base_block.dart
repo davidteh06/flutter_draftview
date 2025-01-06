@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:draft_view/draft_view/plugin/base_plugin.dart';
 import 'package:flutter/material.dart';
 import './extensions.dart';
+import './../../text_theme_extensions.dart';
 
 class BaseBlock {
   /// Block's start
@@ -254,9 +255,7 @@ class BaseBlock {
       blocks = [first, middle, last];
     }
 
-    blocks = blocks
-        .map((e) => this.getBlock(e, plugins)!)
-        .toList();
+    blocks = blocks.map((e) => this.getBlock(e, plugins)!).toList();
 
     return blocks;
   }

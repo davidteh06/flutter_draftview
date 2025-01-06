@@ -1,5 +1,6 @@
 import 'package:draft_view/draft_view/block/base_block.dart';
 import 'package:flutter/material.dart';
+import './../../../text_theme_extensions.dart';
 
 class HeaderBlock extends BaseBlock {
   /// Entity type
@@ -47,55 +48,60 @@ class HeaderBlock extends BaseBlock {
 
     switch (level) {
       case 1:
-        var textStyle = Theme.of(context).textTheme.headline1.copyWith(
-              fontWeight: prevStyle.fontWeight,
-              fontStyle: prevStyle.fontStyle,
-              decoration: prevStyle.decoration,
-              color: textColor(context),
-            );
+        var textStyle = Theme.of(context).textTheme.headline1?.copyWith(
+                  fontWeight: prevStyle.fontWeight,
+                  fontStyle: prevStyle.fontStyle,
+                  decoration: prevStyle.decoration,
+                  color: textColor(context),
+                ) ??
+            TextStyle();
         return textStyle;
 
       case 2:
-        var textStyle = Theme.of(context).textTheme.headline2.copyWith(
-              fontWeight: prevStyle.fontWeight,
-              fontStyle: prevStyle.fontStyle,
-              decoration: prevStyle.decoration,
-              color: textColor(context),
-            );
+        var textStyle = Theme.of(context).textTheme.headline2?.copyWith(
+                  fontWeight: prevStyle.fontWeight,
+                  fontStyle: prevStyle.fontStyle,
+                  decoration: prevStyle.decoration,
+                  color: textColor(context),
+                ) ??
+            TextStyle();
 
         return textStyle;
 
       case 3:
-        var textStyle = Theme.of(context).textTheme.headline3.copyWith(
+        var textStyle = Theme.of(context).textTheme.headline3?.copyWith(
               fontWeight: prevStyle.fontWeight,
               fontStyle: prevStyle.fontStyle,
               decoration: prevStyle.decoration,
               color: textColor(context),
             );
-        return textStyle;
+        return textStyle ?? TextStyle();
       case 4:
-        var textStyle = Theme.of(context).textTheme.headline4.copyWith(
-              fontWeight: prevStyle.fontWeight,
-              fontStyle: prevStyle.fontStyle,
-              decoration: prevStyle.decoration,
-              color: textColor(context),
-            );
+        var textStyle = Theme.of(context).textTheme.headline4?.copyWith(
+                  fontWeight: prevStyle.fontWeight,
+                  fontStyle: prevStyle.fontStyle,
+                  decoration: prevStyle.decoration,
+                  color: textColor(context),
+                ) ??
+            TextStyle();
         return textStyle;
       case 5:
-        var textStyle = Theme.of(context).textTheme.headline5.copyWith(
-              fontWeight: prevStyle.fontWeight,
-              fontStyle: prevStyle.fontStyle,
-              decoration: prevStyle.decoration,
-              color: textColor(context),
-            );
+        var textStyle = Theme.of(context).textTheme.headline5?.copyWith(
+                  fontWeight: prevStyle.fontWeight,
+                  fontStyle: prevStyle.fontStyle,
+                  decoration: prevStyle.decoration,
+                  color: textColor(context),
+                ) ??
+            TextStyle();
         return textStyle;
       default:
-        var textStyle = Theme.of(context).textTheme.headline6.copyWith(
-              fontWeight: prevStyle.fontWeight,
-              fontStyle: prevStyle.fontStyle,
-              decoration: prevStyle.decoration,
-              color: textColor(context),
-            );
+        var textStyle = Theme.of(context).textTheme.headline6?.copyWith(
+                  fontWeight: prevStyle.fontWeight,
+                  fontStyle: prevStyle.fontStyle,
+                  decoration: prevStyle.decoration,
+                  color: textColor(context),
+                ) ??
+            TextStyle();
         return textStyle;
     }
   }

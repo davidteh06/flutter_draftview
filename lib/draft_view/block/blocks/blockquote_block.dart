@@ -1,5 +1,6 @@
 import 'package:draft_view/draft_view/block/base_block.dart';
 import 'package:flutter/material.dart';
+import './../../../text_theme_extensions.dart';
 
 class BlockQuoteBlock extends BaseBlock {
   BlockQuoteBlock({

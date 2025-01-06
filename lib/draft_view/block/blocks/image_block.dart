@@ -3,6 +3,7 @@ import 'package:draft_view/draft_view/block/base_block.dart';
 import 'package:draft_view/draft_view/block/callbacks.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import './../../../text_theme_extensions.dart';
 
 class ImageBlock extends ActionBlock {
   ImageBlock({
@@ -217,7 +218,7 @@ class _ImageDetailViewState extends State<ImageDetailView> {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-          color: Theme.of(context).buttonColor,
+          color: Theme.of(context).colorScheme.primary,
           onPressed: () => Navigator.pop(context),
           icon: Icon(
             Icons.close,

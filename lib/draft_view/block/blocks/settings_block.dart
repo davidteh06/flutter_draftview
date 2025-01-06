@@ -4,7 +4,7 @@ import 'package:draft_view/draft_view/block/base_block.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
+import './../../../text_theme_extensions.dart';
 // To parse this JSON data, do
 //
 //     final settings = settingsFromJson(jsonString);
